@@ -9,7 +9,7 @@ def apply_coupons(cart, coupons)
           cart_index = cart.length
           cart_items[:count] = new_count
           cart[cart_index] = {
-            :item 
+            :item => cart
             
           }
         end
