@@ -22,9 +22,9 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+ cart.each do |cart_items|
+   
+ end
 end
 
 def checkout(cart, coupons)
