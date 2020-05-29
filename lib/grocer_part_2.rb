@@ -5,14 +5,15 @@ def apply_coupons(cart, coupons)
     cart.each do |cart_items|
       if coupon_items[:item] == cart_items[:item]
         if cart_items[:count]>= coupon_items[:num]
-          new_count = cart_items[:count] - coupon_items[:num]
           cart_index = cart.length
+          new_count = cart_items[:count] - coupon_items[:num]
           cart_items[:count] = new_count
           cart[cart_index] = {
             :item => cart_items[:item] + "W/COUPON",
             :price => coupon_items[:cost] / coupon_items[:num],
             :clearance => cart_items[:clearance],
             :count => coupon_items[:num]
+            
           }
         end
       end
