@@ -3,7 +3,7 @@ require_relative './part_1_solution.rb'
 def apply_coupons(cart, coupons)
   coupons.each do |coupon_items|
     cart.each do |cart_items|
-      if coupon_items[:item] == cart_items[:item]
+      if cart_items[:item] == coupon_items[:item]
         if cart_items[:count]>= coupon_items[:num]
           new_count = cart_items[:count] - coupon_items[:num]
           cart_index = cart.length
