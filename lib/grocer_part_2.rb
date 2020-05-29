@@ -6,7 +6,7 @@ def apply_coupons(cart, coupons)
       if coupon_items[:item] == cart_items[:item]
         if cart_items[:count]>= coupon_items[:num]
           new_count = cart_items[:count] - coupon_items[:num]
-          
+          cart_index = cart.length
           cart_items[:count] = new_count
           
           
